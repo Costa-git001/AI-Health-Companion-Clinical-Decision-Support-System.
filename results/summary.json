@@ -1,0 +1,40 @@
+{
+  "dataset": "gretelai/symptom_to_diagnosis",
+  "train_records": 853,
+  "test_records_evaluated": 211,
+  "test_records_in_supplied_split": 212,
+  "exact_duplicate_test_rows_excluded": 1,
+  "remaining_test_rows_nearest_train_cosine_over_090": 6,
+  "remaining_test_rows_nearest_train_cosine_over_080": 22,
+  "labels": 22,
+  "random_seed": 42,
+  "results": [
+    {
+      "model": "majority_baseline",
+      "accuracy": 0.04739336492890995,
+      "macro_f1": 0.004113533525298231,
+      "top3_accuracy": 0.13744075829383887
+    },
+    {
+      "model": "multinomial_nb",
+      "accuracy": 0.9383886255924171,
+      "macro_f1": 0.9369884157809854,
+      "best_params": {
+        "classifier__alpha": 0.1
+      },
+      "cv_macro_f1": 0.9234109679606444,
+      "top3_accuracy": 0.985781990521327
+    },
+    {
+      "model": "linear_svc",
+      "accuracy": 0.943127962085308,
+      "macro_f1": 0.9416147117104053,
+      "best_params": {
+        "classifier__C": 2.0
+      },
+      "cv_macro_f1": 0.9335441165458054,
+      "top3_accuracy": 0.990521327014218
+    }
+  ],
+  "note": "Closed-set text benchmark only. Scores do not establish clinical validity or diagnostic probability."
+}

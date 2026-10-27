@@ -1,0 +1,67 @@
+model,label,precision,recall,f1,support
+majority_baseline,allergy,0.04739336492890995,1.0,0.09049773755656108,10
+majority_baseline,arthritis,0.0,0.0,0.0,10
+majority_baseline,bronchial asthma,0.0,0.0,0.0,10
+majority_baseline,cervical spondylosis,0.0,0.0,0.0,10
+majority_baseline,chicken pox,0.0,0.0,0.0,10
+majority_baseline,common cold,0.0,0.0,0.0,10
+majority_baseline,dengue,0.0,0.0,0.0,10
+majority_baseline,diabetes,0.0,0.0,0.0,10
+majority_baseline,drug reaction,0.0,0.0,0.0,8
+majority_baseline,fungal infection,0.0,0.0,0.0,9
+majority_baseline,gastroesophageal reflux disease,0.0,0.0,0.0,10
+majority_baseline,hypertension,0.0,0.0,0.0,10
+majority_baseline,impetigo,0.0,0.0,0.0,10
+majority_baseline,jaundice,0.0,0.0,0.0,6
+majority_baseline,malaria,0.0,0.0,0.0,10
+majority_baseline,migraine,0.0,0.0,0.0,10
+majority_baseline,peptic ulcer disease,0.0,0.0,0.0,10
+majority_baseline,pneumonia,0.0,0.0,0.0,10
+majority_baseline,psoriasis,0.0,0.0,0.0,10
+majority_baseline,typhoid,0.0,0.0,0.0,9
+majority_baseline,urinary tract infection,0.0,0.0,0.0,9
+majority_baseline,varicose veins,0.0,0.0,0.0,10
+multinomial_nb,allergy,0.9,0.9,0.9,10
+multinomial_nb,arthritis,1.0,1.0,1.0,10
+multinomial_nb,bronchial asthma,0.9090909090909091,1.0,0.9523809523809523,10
+multinomial_nb,cervical spondylosis,1.0,0.9,0.9473684210526315,10
+multinomial_nb,chicken pox,0.8888888888888888,0.8,0.8421052631578947,10
+multinomial_nb,common cold,0.9090909090909091,1.0,0.9523809523809523,10
+multinomial_nb,dengue,1.0,0.9,0.9473684210526315,10
+multinomial_nb,diabetes,1.0,0.8,0.8888888888888888,10
+multinomial_nb,drug reaction,0.8888888888888888,1.0,0.9411764705882353,8
+multinomial_nb,fungal infection,1.0,1.0,1.0,9
+multinomial_nb,gastroesophageal reflux disease,0.8181818181818182,0.9,0.8571428571428571,10
+multinomial_nb,hypertension,0.9090909090909091,1.0,0.9523809523809523,10
+multinomial_nb,impetigo,1.0,1.0,1.0,10
+multinomial_nb,jaundice,0.75,1.0,0.8571428571428571,6
+multinomial_nb,malaria,1.0,1.0,1.0,10
+multinomial_nb,migraine,1.0,0.9,0.9473684210526315,10
+multinomial_nb,peptic ulcer disease,1.0,0.7,0.8235294117647058,10
+multinomial_nb,pneumonia,1.0,1.0,1.0,10
+multinomial_nb,psoriasis,1.0,0.9,0.9473684210526315,10
+multinomial_nb,typhoid,0.75,1.0,0.8571428571428571,9
+multinomial_nb,urinary tract infection,1.0,1.0,1.0,9
+multinomial_nb,varicose veins,1.0,1.0,1.0,10
+linear_svc,allergy,1.0,0.9,0.9473684210526315,10
+linear_svc,arthritis,1.0,1.0,1.0,10
+linear_svc,bronchial asthma,0.9090909090909091,1.0,0.9523809523809523,10
+linear_svc,cervical spondylosis,1.0,1.0,1.0,10
+linear_svc,chicken pox,0.8181818181818182,0.9,0.8571428571428571,10
+linear_svc,common cold,0.9090909090909091,1.0,0.9523809523809523,10
+linear_svc,dengue,0.875,0.7,0.7777777777777778,10
+linear_svc,diabetes,1.0,0.9,0.9473684210526315,10
+linear_svc,drug reaction,0.8,1.0,0.8888888888888888,8
+linear_svc,fungal infection,1.0,1.0,1.0,9
+linear_svc,gastroesophageal reflux disease,0.9090909090909091,1.0,0.9523809523809523,10
+linear_svc,hypertension,1.0,0.9,0.9473684210526315,10
+linear_svc,impetigo,1.0,1.0,1.0,10
+linear_svc,jaundice,1.0,0.8333333333333334,0.9090909090909091,6
+linear_svc,malaria,1.0,1.0,1.0,10
+linear_svc,migraine,0.9,0.9,0.9,10
+linear_svc,peptic ulcer disease,1.0,0.9,0.9473684210526315,10
+linear_svc,pneumonia,1.0,0.9,0.9473684210526315,10
+linear_svc,psoriasis,1.0,1.0,1.0,10
+linear_svc,typhoid,0.8888888888888888,0.8888888888888888,0.8888888888888888,9
+linear_svc,urinary tract infection,0.9,1.0,0.9473684210526315,9
+linear_svc,varicose veins,0.9090909090909091,1.0,0.9523809523809523,10

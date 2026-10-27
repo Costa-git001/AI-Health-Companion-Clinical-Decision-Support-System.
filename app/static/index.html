@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f4">
+  <title>CareNote | Health Companion</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="CareNote home"><span class="brand-mark">+</span><span>CareNote</span></a>
+    <div class="local-badge"><span class="pulse"></span> Local prototype</div>
+  </header>
+
+  <main class="shell">
+    <section class="intro">
+      <div class="eyebrow">YOUR VISIT, BETTER PREPARED</div>
+      <h1>Put your symptoms<br><em>into your own words.</em></h1>
+      <p class="lead">Capture what you have noticed and prepare a clear summary to share with a healthcare professional.</p>
+    </section>
+
+    <div class="notice" role="note">
+      <span class="notice-icon">i</span>
+      <p><strong>Research prototype.</strong> This tool organizes information only. It does not diagnose, assess urgency, or recommend treatment. Use synthetic details for demonstrations. If you think you may be in immediate danger, contact local emergency services.</p>
+    </div>
+
+    <div class="workspace">
+      <section class="card input-card" aria-labelledby="entry-title">
+        <div class="card-head">
+          <div><span class="step">01</span><h2 id="entry-title">What have you noticed?</h2></div>
+          <span class="optional">PRIVATE DRAFT</span>
+        </div>
+        <label for="description">Describe your symptoms in your own words</label>
+        <textarea id="description" maxlength="4000" placeholder="For example: I have had a headache since yesterday afternoon and have been feeling tired..."></textarea>
+        <div class="field-foot"><span>Try to include when it started and how it has changed.</span><span id="char-count">0 / 4000</span></div>
+        <div class="field-grid">
+          <div><label for="duration">How long has this been happening?</label><input id="duration" type="text" maxlength="100" placeholder="e.g. since yesterday"></div>
+          <div><label for="severity">How would you describe it?</label><select id="severity"><option value="">Choose one</option><option>Mild</option><option>Moderate</option><option>Severe</option><option>It varies</option></select></div>
+        </div>
+        <button class="primary" id="extract-button"><span>Organize my notes</span><span aria-hidden="true">→</span></button>
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <p class="privacy-line"><span aria-hidden="true">⌑</span> Draft stays in this browser tab and is cleared when you close or refresh it.</p>
+      </section>
+
+      <section class="card review-card" aria-labelledby="review-title">
+        <div class="card-head">
+          <div><span class="step">02</span><h2 id="review-title">Review your notes</h2></div>
+          <span class="optional">YOU ARE IN CONTROL</span>
+        </div>
+        <p class="muted">Possible symptom words are highlighted for you to confirm. Remove anything that does not fit, or add a detail we missed.</p>
+        <div id="empty-state" class="empty-state"><div class="empty-icon">✳</div><p>Your reviewed list will appear here.</p><span>Nothing is shared automatically.</span></div>
+        <div id="review-area" hidden>
+          <div id="symptom-list" class="symptom-list"></div>
+          <div class="add-row"><input id="add-symptom" type="text" maxlength="80" placeholder="Add a symptom or detail"><button id="add-button" class="secondary">Add</button></div>
+          <div class="source-note"><span class="source-dot"></span><span id="match-summary">Phrase matches are suggestions for your review.</span></div>
+        </div>
+        <div class="rank-action">
+          <button id="rank-button" class="secondary" disabled>Explore AI ranked labels <span>→</span></button>
+          <p>Research demo: compares your text with a small, fixed benchmark of symptom descriptions.</p>
+        </div>
+        <section id="rank-panel" class="rank-panel" hidden aria-live="polite">
+          <div class="rank-title"><div><span class="eyebrow">TEXT CLASSIFICATION DEMO</span><h3>Labels the model ranked</h3></div><span class="benchmark-badge">22-label benchmark</span></div>
+          <p class="rank-caveat">These are dataset labels ranked by a text model. They are not a clinical differential or a probability of having a condition. The training descriptions were LLM-modified and do not represent a validated patient population.</p>
+          <div id="rank-results" class="rank-results"></div>
+          <p class="rank-features-note">“Text signals” are words that influenced this model’s ranking. They are not clinical evidence.</p>
+          <p id="rank-error" class="error" role="alert" hidden></p>
+        </section>
+        <div class="divider"></div>
+        <div class="summary-cta">
+          <div><h3>Ready to share?</h3><p>Create a simple summary you can print or save as a PDF.</p></div>
+          <button id="summary-button" class="secondary" disabled>Preview summary <span>↗</span></button>
+        </div>
+      </section>
+    </div>
+
+    <section id="summary-panel" class="card summary-panel" hidden aria-labelledby="summary-title">
+      <div class="summary-heading"><div><span class="eyebrow">PRE-VISIT SUMMARY</span><h2 id="summary-title">Your notes, ready to share</h2></div><div class="summary-actions"><button id="print-button" class="secondary">Print / Save PDF</button><button id="close-summary" class="icon-button" aria-label="Close summary">×</button></div></div>
+      <p class="summary-caption">Review this summary for accuracy before sharing it. It is not a medical record or diagnosis.</p>
+      <div class="summary-meta"><div><span>DATE PREPARED</span><strong id="summary-date"></strong></div><div><span>DURATION</span><strong id="summary-duration"></strong></div><div><span>REPORTED SEVERITY</span><strong id="summary-severity"></strong></div></div>
+      <h3>Symptoms and details I reported</h3><ul id="summary-items" class="summary-items"></ul>
+      <h3>My description</h3><p id="summary-description" class="summary-description"></p>
+      <div class="summary-disclaimer">Prepared by the user with help from a phrase-matching research prototype. A healthcare professional should assess the information in context.</div>
+    </section>
+    <footer><span>CareNote <span class="footer-dot">·</span> Student research prototype</span><a href="/docs" target="_blank" rel="noreferrer">Technical API docs</a></footer>
+  </main>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
